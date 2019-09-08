@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
         mediaPlayer1=MediaPlayer.create(this,R.raw.backgroundmusic);
         mediaPlayer2=MediaPlayer.create(this,R.raw.soundtrack);
+        //Random Background
         view.setBackgroundColor(Color.rgb(random.nextInt(268),random.nextInt(265),random.nextInt(286)));
 
     }
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if (dm!=0){
             soundPool.play(dm,1,1,0,0,1);
+            //Random Background
+            view.setBackgroundColor(Color.rgb(random.nextInt(268),random.nextInt(265),random.nextInt(286)));
         }
         return false;
     }
